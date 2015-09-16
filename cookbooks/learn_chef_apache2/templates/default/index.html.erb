@@ -1,0 +1,11 @@
+<html>
+  <body>
+	  <h1>hello from <%= node['fqdn'] %></h1>
+	  <pre>
+	    host name: <%= node['hostname']%>
+	    platform: <%= node['platform'] %>
+	    total installed memory: <%= node['memory']['total'] %>
+	    CPUs: <%= node['cpu']['total'] %>
+	  </pre>
+  </body>
+</html>

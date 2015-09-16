@@ -1,0 +1,12 @@
+#!upstart
+
+description "Redis Server"
+
+env USER=<%= node[:redis][:user] %>
+
+start on runlevel [23]
+stop on shutdown
+
+exec sudo -u $USER /usr/local/bin/redis-server /etc/redis/redis.conf
+
+respawn
